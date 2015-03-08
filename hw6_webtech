@@ -1,0 +1,496 @@
+<html>
+<head>
+<title>
+Homework 6
+</title>
+
+<script src="./js/jQuery.js"></script>
+<script src="./js/jQueryUI/ui.tablesorter.js"></script>
+
+<script>
+    
+</script>
+<script type = "text/javascript">
+function function1()
+{
+var keyword1 = document.getElementById("keywords").value;
+var from1 = (document.getElementById("pr1").value);
+var to1 = (document.getElementById("pr2").value);
+/*var condition = (document.getElementById("pr2").value);
+var buying_formats = (document.getElementById("pr2").value);
+var seller = (document.getElementById("pr2").value);
+var shipping = (document.getElementById("pr2").value);
+var max_days = (document.getElementById("days").value);
+var sort_by = (document.getElementById("sortby").value);
+var rpp = (document.getElementById("results").value);*/
+//var reg = /^(\d*.?\d*)$/
+
+	if (keyword1 == ""){
+		alert("Please enter value for Key Words");
+		return false;	
+	}
+
+	if (from1 != "") {
+	from2 = parseFloat(from1);
+		if (!(from2)){
+		alert("Please enter numeric values in the FROM $ field");
+		}
+	}
+	
+	if (to1 != "") {
+	to2 = parseFloat(to1);
+		if (!(to2)){
+		alert("Please enter numeric values in the TO $ field");
+		}
+	}
+		if (from2!="" && to2 != "" && from2 > to2){
+		
+			alert("The FROM $ value in the price range should be less than the TO $ value in the price range");
+			return false;
+		}
+		
+		
+	//function2();
+}
+</script>
+<style>
+p.shopping{
+text-align: center;
+}
+
+form#form1{
+}
+
+div.button1{
+padding-left: 700px;}
+
+fieldset.body1{
+border: 3px solid #000000;
+align: center;
+}
+
+fieldset.body2{
+border: 3px solid #000000;}
+
+tr.a1{
+	
+}
+</style>
+</head>
+
+<body>
+<fieldset class="body1" style="width:900 ">
+<p class="shopping">
+<img src="http://cs-server.usc.edu:45678/hw/hw6/ebay.jpg" align=center>
+<span style="font-size: 40px" >
+Shopping
+</span>
+</p>
+<fieldset class="body2" style="width:840 margin: 0px 15px 15px 15px"  >
+<form  method="POST" onsubmit="return function1()" action="hw6d.php">
+<table>
+<tr>
+
+<b>Key Words*: </b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+<input type="text" name="keywords" id="keywords" size="96.5"> 
+<hr>
+
+<b>Price Range: </b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+ from $ <input type="text" name="pr1" id="pr1" > 
+ to $ <input type="text" name="pr2" id="pr2" >
+<hr>
+
+<b>Condition: </b>
+&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+<INPUT TYPE="checkbox" NAME="new1" id="new" VALUE="1000" />New 
+<INPUT TYPE="checkbox" NAME="used" id="used" VALUE="3000" />Used 
+<INPUT TYPE="checkbox" NAME="vgood" id="vgood" VALUE="4000" />Very Good
+<INPUT TYPE="checkbox" NAME="good" id="good" VALUE="5000" />Good 
+<INPUT TYPE="checkbox" NAME="acceptable" id="acceptable" VALUE="6000" />Acceptable
+<hr>
+
+
+
+
+<b> Buying formats: </b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<INPUT TYPE="checkbox" NAME="buyitnow" id="buyitnow" VALUE="buy it now" />Buy It Now 
+<INPUT TYPE="checkbox" NAME="auction" id="auction" VALUE="auction" />Auction 
+<INPUT TYPE="checkbox" NAME="classifiedads" id="classifiedads" VALUE="classified ads" />Classified Ads 
+<hr>
+
+
+
+<b> Seller: </b>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<INPUT TYPE="checkbox" NAME="seller" id="seller" VALUE="True" /> Return Accepted 
+<hr>
+
+
+
+<b> Shipping: </b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<INPUT TYPE="checkbox" NAME="freeshipping" id="freeshipping" VALUE="free shipping" >Free Shipping 
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp
+<INPUT TYPE="checkbox" NAME="expedited" id="expedited" VALUE="Expedited" >
+Expedited shipping available 
+<br>
+
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+Maximum handling times (days):  
+<input type="text" name="days" id="days">
+
+<hr>
+
+
+<b> Sort by:  </b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<SELECT NAME="sortby" SIZE=1 id="sortby">
+ <OPTION SELECTED value="BestMatch"> Best Match </OPTION>
+ <OPTION value="CurrentPriceHighest"> Price: highest first</OPTION>
+ <OPTION value="CurrentPriceLowest"> Price: lowest first</OPTION>
+ <OPTION value="PricePlusShippingHighest"> Price + Shipping: highest first</OPTION>
+ <OPTION value="PricePlusShippingLowest"> Price + Shipping: lowest first</OPTION>
+ <select>
+ <hr>
+ 
+ <b> Results Per Page: </b>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <SELECT NAME="results" id="results" SIZE=1>
+ <OPTION SELECTED value="5"> 5 </OPTION>
+ <OPTION value="10"> 10</OPTION>
+ <OPTION value="15"> 15</OPTION>
+ <OPTION value="20"> 20</OPTION>
+ <select>
+ <hr>
+ </tr>
+<div class="button1">
+<input type=reset name="clear" id="clear" value="clear">
+<input type=submit name="search" id="search" value="search">
+</div>
+</form>
+</table>
+</fieldset>
+</fieldset>
+
+
+<?php
+//error_reporting(E_ALL); 
+error_reporting(E_ERROR | E_PARSE);
+
+if(isset($_POST['keywords']))
+{
+
+  $endpoint = 'http://svcs.ebay.com/services/search/FindingService/v1';  // URL to call
+  $responseEncoding = 'XML';   // Format of the response
+
+  $safeQuery = urlencode (utf8_encode($_POST['keywords']));
+ // $site  = $_POST['GlobalID'];
+$keyword=$_POST['keywords'];
+
+
+//$shipping1=$_POST['shipping'];
+
+$days=$_POST['days'];
+$sortby=$_POST['sortby'];
+$rpp=$_POST['results'];
+  $price_min = $_POST['pr1'];
+  $price_max = $_POST['pr2'];
+  //$itemsPerRange = $_POST['ItemsPerRange'];
+  //$debug = (boolean) $_POST['Debug'];
+  
+  
+
+//$N_shipping = count($shipping1);
+
+global $x;
+$x = -1;
+
+if($_POST['pr1']>0)
+{$x++;
+$str = "&itemFilter($x).name=MinPrice&itemFilter($x).value=$price_min";
+}
+
+
+if($_POST['pr2']>0){
+	$x++;
+$str = $str . "&itemFilter($x).name=MaxPrice&itemFilter($x).value=$price_max";
+}
+
+
+//if(($_POST['condition'])){
+	//$condition1=$_POST['condition'];
+	//$N_condition = count($condition1);
+//$x++;
+//$str = $str . "&itemFilter($x).name=condition";
+/*for ($i=0; $i < $N_condition; $i++){
+	$x++;
+	$str = $str . "&itemFilter($x).name=condition";
+	if ($condition1[$i]=="new"){
+	$str = $str . "&itemFilter($x).value($i)=1000";
+	echo "new";	
+	}
+	else if ($condition1[$i]=="used"){
+	$str = $str . "&itemFilter($x).value($i)=3000";
+	echo "used";	
+	}
+	else if ($condition1[$i]=="very good"){
+	$str = $str . "&itemFilter($x).value($i)=4000";	
+	echo "very good";
+	}
+	else if ($condition1[$i]=="good"){
+	$str = $str . "&itemFilter($x).value($i)=5000";	
+	echo "good";
+	}
+	else if ($condition1[$i]=="acceptable"){
+	$str = $str . "&itemFilter($x).value($i)=6000";	
+	
+	echo "acceptable";
+	}
+	}
+}*/
+	if($_POST['new1']==1000||$_POST['used']==3000||$_POST['vgood']==4000||$_POST['good']==5000||$_POST['acceptable']==6000){
+	$x++;
+	$str .= "&itemFilter($x).name=Condition";
+	$y=-1;
+	if($_POST['new1']==1000)
+	{
+		$y++;
+	$str .= "&itemFilter($x).value($y)=1000";
+	}
+	if($_POST['used']==3000)
+	{
+	$y++;
+	$str .= "&itemFilter($x).value($y)=3000";
+	}
+	
+	if($_POST['vgood']==4000)
+	{
+	$y++;
+	$str .= "&itemFilter($x).value($y)=4000";
+	}
+	
+	if($_POST['good']==5000)
+	{
+	$y++;
+	$str .= "&itemFilter($x).value($y)=5000";
+	}
+	
+	if($_POST['acceptable']==6000)
+	{
+	$y++;
+	$str .= "&itemFilter($x).value($y)=6000";
+	}
+	}
+	/*if(isset($_POST['buying_formats'])){
+		$buy1=$_POST['buying_formats'];
+		$N_buying_formats = count($buy1);
+		//$x++;
+		//$str = $str . "&itemFilter($x).name=ListingType";
+	for ($j=0; $j < $N_buying_formats; $j++){
+		$x++;
+		$str = $str . "&itemFilter($x).name=ListingType";
+	if ($buy1[$j]=="buy it now"){
+	$str = $str . "&itemFilter($x).value($j)=FixedPrice";	
+	}
+	else if ($buy1[$j]=="auction"){
+	$str = $str . "&itemFilter($x).value($j)=Auction";	
+	}
+	else if ($buy1[$j]=="classified ads"){
+	$str = $str . "&itemFilter($x).value($j)=Classified";	
+	}
+	}
+	}*/
+	
+	if(isset($_POST['buyitnow'])||($_POST['auction'])||($_POST['classifiedads'])){
+	$x++;
+	$str .= "&itemFilter($x).name=ListingType";
+	$z=-1;
+	if(isset($_POST['buyitnow']))
+	{
+	$z++;
+	$str .= "&itemFilter($x).value($z)=FixedPrice";
+	}
+	if(isset($_POST['auction']))
+	{
+	$z++;
+	$str .= "&itemFilter($x).value($z)=Auction";
+	}
+	if(isset($_POST['classifiedads']))
+	{
+	$z++;
+	$str .= "&itemFilter($x).value($z)=Classified";
+	}
+	}
+	if(($_POST['seller']=="True")){
+		$seller1=$_POST['seller'];
+		$x++;
+		$str = $str . "&itemFilter($x).name=ReturnsAcceptedOnly&itemFilter($x).value=true";
+	}
+	else{
+		$x++;
+		$str = $str . "&itemFilter($x).name=ReturnsAcceptedOnly&itemFilter($x).value=false";
+	}
+
+	if(($_POST["freeshipping"]=="free shipping")){
+		$x++;
+		$str = $str . "&itemFilter($x).name=Free_Shipping_Only&itemFilter($x).value=true";
+	}
+	/*else{
+		$x++;
+	$str = $str . "&itemFilter($x).name=Free_Shipping_Only&itemFilter($x).value=False";	
+	}*/
+	
+	if(($_POST["expedited"])=="Expedited"){
+		$x++;
+		$exp=$_POST["expedited"];
+		$str = $str . "&itemFilter($x).name=ExpeditedShippingType&itemFilter($x).value=$exp";
+	}
+	/*else{
+		$x++;
+	$str = $str . "&itemFilter($x).name=ExpeditedShippingType&itemFilter($x).value=False";	
+	}*/
+	
+	if($_POST['days']>0){
+	$str = $str . "&itemFilter($x).name=MaxHandlingTime&itemFilter($x).value=$days";
+	}
+	
+	$apicall = "$endpoint?OPERATION-NAME=findItemsAdvanced"
+         . "&SERVICE-VERSION=1.0.0"
+         . "&SECURITY-APPNAME=USCa91f75-9946-49ce-ab75-b5a32cace03"
+         . "&keywords=$safeQuery"
+         . "&sortOrder=$sortby"
+		 . "&paginationInput.entriesPerPage=$rpp"
+         . $str
+         . "&affiliate.networkId=9"  // fill in your information in next 3 lines
+         . "&affiliate.trackingId=1234567890"
+         . "&affiliate.customId=456"
+         . "&RESPONSE-DATA-FORMAT=$responseEncoding";
+		 
+		 if ($_POST["search"]) {
+      print "GET call = $apicall <br>";
+	  
+	  $resp = simplexml_load_file($apicall);
+	  if ($resp->ack == "Success") {
+  $results = '';
+	  }
+	  else{
+		  echo "Acknowledgement not received from the server";
+	  }
+	  
+	  if ($resp && $resp->paginationOutput->totalEntries > 0) {
+      //global $results;
+	  $results .= '<b>Total items : ' . $resp->paginationOutput->totalEntries . "<br /><br /></b>";
+	  
+	  
+	  foreach($resp->searchResult->item as $item) {
+        if ($item->galleryURL) {
+          $picURL = $item->galleryURL;
+        } else {
+          $picURL = "http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif";
+		 }
+        $link  = $item->viewItemURL;
+        $title = $item->title;
+		$price = sprintf("%01.2f", $item->sellingStatus->convertedCurrentPrice);
+        $ship  = sprintf("%01.2f", $item->shippingInfo->shippingServiceCost);
+        $total = sprintf("%01.2f", ((float)$item->sellingStatus->convertedCurrentPrice
+                      + (float)$item->shippingInfo->shippingServiceCost));
+					  
+					  // Determine currency to display - so far only seen cases where priceCurr = shipCurr, but may be others
+        $priceCurr = (string) $item->sellingStatus->convertedCurrentPrice['currencyId'];
+        $shipCurr  = (string) $item->shippingInfo->shippingServiceCost['currencyId'];
+		$top = $item->topRatedListing;
+		$cond = $item->condition->conditionDisplayName;
+		$desc = $item->title;
+		$buy = $item->listingInfo->listingType;
+		$returns = $item->returnsAccepted;
+		$shipping = $item->shippingInfo->shippingServiceCost;
+		
+		if($shipping<=0)
+		{
+			$free="FREE Shipping";
+					}
+		else{
+			$free="Shipping Not FREE";
+		}
+		$exp = $item->shipingInfo->expeditedShipping;
+		if($exp)
+		{
+			$exp1="Expedited Shipping Available -- Handled for shipping in $handling day(s)";
+					}
+		else{
+			$exp1="Expedited Shipping not Available";
+		}
+		$handling = $item->shippingInfo->handlingTime;
+		$price1 = $item->sellingStatus->convertedCurrentPrice;
+		$price2 = $item->shippingInfo->shippingServiceCost;
+		$location = $item->location;
+		$country = $item->country;
+		$topimg = "http://cs-server.usc.edu:45678/hw/hw6/itemTopRated.jpg";
+        if ($priceCurr == $shipCurr) {
+          $curr = $priceCurr;
+        } else {
+          $curr = "$priceCurr / $shipCurr";  // potential case where price/ship currencies differ
+        }
+		$results .="<table style='padding-left:5px; padding-right:5px;overflow:auto;'>";
+		
+		$results .="<tr style='height=20%;' class='a1' style= 'box-sizing: border-box; border:1px solid;border-left:1px solid; border-right:1px solid; padding-left:10px;'><td><img src=\"$picURL\" height=200px width=200px></td><td><a href=\"$link\">$title</a><br />";
+		if ($top=="true"){
+		$results .="<br /><b>Condition:</b> $cond  <img src=\"$topimg\"height=70px width=70px>";
+		}
+		
+		else{
+		$results .="<br /><b>Condition:</b> $cond  ";
+		}
+		$results .="<br /><br /><b>$buy</b><br /><br />";
+		if($returns=="true"){
+		$results .="<br>Seller accepts returns";
+		}
+		elseif($returns=="false") {
+		$results .="<br>Seller does not accept returns";	
+		}
+		$d="$";
+		$results .="<br>$free -- $exp1";
+		if($price2>0.00){
+		$results .= "<br /><br /><b>Price: $d$price1(+$d$price2 for shipping)</b> From $location, $country</td></tr></fieldset>";	
+		}
+		else {
+		$results .= "<br /><br /><b>Price: $d$price1</b> From $location, $country</td></tr></p>";
+	
+		}
+		//$results .="</tr>";
+      }
+      $results .= "</table>";
+    }
+    // If there was no response, print an error
+    else {
+      $results = "<p><i><b>No items found<b></i></p>";
+    }
+    $price_min = $price_max; // set up for next iteration
+  } // foreach
+ echo $results;
+} // if
+
+
+?>
+
+
+
+</body>
+
+</html>
