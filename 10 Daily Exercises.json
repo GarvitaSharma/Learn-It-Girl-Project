@@ -1,0 +1,649 @@
+{
+  "application": {
+    "packageName": "com.playsimple.fitnessapp",
+    "components": {
+      "Component": [
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.MainActivity",
+          "IntentFilter": {
+            "filter": {
+              "actions": "android.intent.action.MAIN",
+              "categories": "android.intent.category.LAUNCHER"
+            }
+          }
+        },
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.ExerciseStartActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.ViewExercisesActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.SettingsActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.CalendarView"
+        },
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.AppsActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.ChosenExerciseActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.ChangeRestTimeActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.SetReminderActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.DifficultyActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.playsimple.fitnessapp.FinishExerciseActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.startapp.android.publish.list3d.List3DActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.startapp.android.publish.OverlayActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.startapp.android.publish.FullScreenActivity"
+        },
+        {
+          "type": "activity",
+          "name": "com.flurry.android.FlurryFullscreenTakeoverActivity"
+        },
+        {
+          "type": "receiver",
+          "name": "com.playsimple.fitnessapp.data.MyReceiver"
+        }
+      ]
+    },
+    "newIntents": {
+      "Intent": [
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.ChangeRestTimeActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "orm5a9vo9adgujln6s5e0p97i1"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void appsActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.AppsActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "febpdcedq09amci1r9uk3j81eg"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.SettingsActivity: void rateApp()",
+          "sender": "com.playsimple.fitnessapp.SettingsActivity",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "qinr7b6kufu93p1r4nt3adkn10"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapter$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapter",
+          "component": "com.playsimple.fitnessapp.ChosenExerciseActivity",
+          "extra": "true",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "flhh5net5orfopov12bvkq4k7u"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.SetReminderActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "8r4agshuu8mab0sjin4u81bhas"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.SettingsActivity: void rateApp()",
+          "sender": "com.playsimple.fitnessapp.SettingsActivity",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "krdl2fa2p8dndc64ebumhrlanh"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void appsActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.AppsActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "1tqt7e1dsiep7keaei4vk7sdtr"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterApps$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterApps",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "u17uia1akumdeloqh3lmasphgg"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterApps$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterApps",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "h0ia2oqugd2mrh7s41ingufmve"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void settingsActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.SettingsActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "2qda8n4bktq58fprqh2nq7g1t2"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.ChangeRestTimeActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "180o0g1rfskaecp8r7g0821a01"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.DifficultyActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "5fum1fub2bj8ifergr274q8g5i"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void viewExercisesActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.ViewExercisesActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "g2p86jmst4rue4nicg9m4ghjfo"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterApps$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterApps",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "u94heo28qo04divlpu6mrohq42"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.SettingsActivity: void rateApp()",
+          "sender": "com.playsimple.fitnessapp.SettingsActivity",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "aj8k7tthf4rv1da7ova2i4s04r"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.DifficultyActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "kcd14qvddi7103kn035e8iipm1"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.ExerciseStartActivity: void finishedExerciseActivity()",
+          "sender": "com.playsimple.fitnessapp.ExerciseStartActivity",
+          "component": "com.playsimple.fitnessapp.FinishExerciseActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "jlnf5mqgadqr37c7ughaffr8sq"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void calendarActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.CalendarView",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "157664q2m42b8t4qf6ico4mom4"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterApps$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterApps",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "889frq86f0qchpkn4cegm037ma"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.FinishExerciseActivity: void goToMenu(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.FinishExerciseActivity",
+          "component": "com.playsimple.fitnessapp.MainActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "ru0jvus9ndshui9236guk6t9ij"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterApps$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterApps",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "alttbcq0hngghue91b16c0i9j3"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterApps$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterApps",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "vueqjdkv3c0f182phq5v0ct7ln"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.FinishExerciseActivity: void goToMenu(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.FinishExerciseActivity",
+          "component": "com.playsimple.fitnessapp.MainActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "ii80gbk37pjctptufpn5op1lfj"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.SetReminderActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "6cm18rk0fk4isi4t3g5n30uqa5"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.FinishExerciseActivity: void goToMenu(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.FinishExerciseActivity",
+          "component": "com.playsimple.fitnessapp.MainActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "nmjpg1raqf18d1tmipp5j5vrod"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void settingsActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.SettingsActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "csmlek3rr0re2jg2att4stco6a"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.SettingsActivity: void rateApp()",
+          "sender": "com.playsimple.fitnessapp.SettingsActivity",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "sh9deq3qm22pamk19pmlgp3tkg"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void startTrainingActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.ExerciseStartActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "7jlsukftj8sijvmcvhdi2btpeo"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.ExerciseStartActivity: void finishedExerciseActivity()",
+          "sender": "com.playsimple.fitnessapp.ExerciseStartActivity",
+          "component": "com.playsimple.fitnessapp.FinishExerciseActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "9iuvab6mtccn4n6un56qelem1r"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void calendarActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.CalendarView",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "bu216o6iit5sh3ii87nrch2593"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void startTrainingActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.ExerciseStartActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "jr2cqbv8jkg9i22oo69isfvf3"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void settingsActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.SettingsActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "5h166h9t1hpnijanajeiaimfn6"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void startTrainingActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.ExerciseStartActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "lmni2uuv4k12pffko4mivm4hrn"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterApps$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterApps",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "g4tijufauungc0bl45hlamjh7i"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterApps$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterApps",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "6ntrno36gc2ij8qcllmvao8tt0"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.SettingsActivity: void rateApp()",
+          "sender": "com.playsimple.fitnessapp.SettingsActivity",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "733t3tac1ukb21sm75vc0cpes"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.DifficultyActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "gc1o6ecu1u3p7t3jl5pst5ftd8"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.SetReminderActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "3cjps3a72rqvghh4ue6umi3m2f"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.SettingsActivity: void rateApp()",
+          "sender": "com.playsimple.fitnessapp.SettingsActivity",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "2sh0r1bh37q74bkojdt79qions"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.FinishExerciseActivity: void goToMenu(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.FinishExerciseActivity",
+          "component": "com.playsimple.fitnessapp.MainActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "kqftk228rp0bldht1q1i3u49s3"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void viewExercisesActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.ViewExercisesActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "aitef78u33r8fbr9hhh8vb9ppr"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapter$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapter",
+          "component": "com.playsimple.fitnessapp.ChosenExerciseActivity",
+          "extra": "true",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "9efq1t1o8nkntmpfqi94m4cp6b"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void calendarActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.CalendarView",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "orniuj2cggnte1h5g0mboh7v6u"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.ChangeRestTimeActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "qbnngbfuembh8g1vu841molvfv"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.DifficultyActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "nv6o2nckiiu81ubp9fmkbmmuj8"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void viewExercisesActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.ViewExercisesActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "gdrcrhpir6uj8u68hcder8f57s"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.SetReminderActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "omftmepc0ml47dvclke5pmdrtm"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.SettingsActivity: void rateApp()",
+          "sender": "com.playsimple.fitnessapp.SettingsActivity",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "fotj4m5gldq24aud15fbtuputc"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapterSettings: void openActivity(int)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapterSettings",
+          "component": "com.playsimple.fitnessapp.ChangeRestTimeActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "794pj76p72p9kgri3u3e4hidte"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.ExerciseStartActivity: void finishedExerciseActivity()",
+          "sender": "com.playsimple.fitnessapp.ExerciseStartActivity",
+          "component": "com.playsimple.fitnessapp.FinishExerciseActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "omadv5sh4ho03rul7l26g36br9"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.ExerciseStartActivity: void finishedExerciseActivity()",
+          "sender": "com.playsimple.fitnessapp.ExerciseStartActivity",
+          "component": "com.playsimple.fitnessapp.FinishExerciseActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "jtp95vno0o6s8te2nfi07880ub"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void calendarActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.CalendarView",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "avnesbd8h1eo62fgc2vtgbro04"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void appsActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.AppsActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "gfds4e7c5ijahaj2vgu1ria07m"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapter$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapter",
+          "component": "com.playsimple.fitnessapp.ChosenExerciseActivity",
+          "extra": "true",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "aonv4q1fdjs52vlkhm24fnm95o"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void viewExercisesActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.ViewExercisesActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "v3ff7g2lsl4ea245shel2q8t56"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void startTrainingActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.ExerciseStartActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "jgunjjlcofjdu48ani9gr1oops"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void settingsActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.SettingsActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "2t8ogkf9jban2u5obibjqkqmuj"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.SettingsActivity: void rateApp()",
+          "sender": "com.playsimple.fitnessapp.SettingsActivity",
+          "action": "\"android.intent.action.VIEW\"",
+          "scheme": "hasValue",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "93vheehg06eptfik2r87s73neq"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.data.CustomAdapter$1: void onClick(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.data.CustomAdapter",
+          "component": "com.playsimple.fitnessapp.ChosenExerciseActivity",
+          "extra": "true",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "cms4i3dfpq728ms64scgtchjg2"
+        },
+        {
+          "calledAt": "com.playsimple.fitnessapp.MainActivity: void appsActivity(android.view.View)",
+          "sender": "com.playsimple.fitnessapp.MainActivity",
+          "component": "com.playsimple.fitnessapp.AppsActivity",
+          "extra": "false",
+          "sensitiveData": "false",
+          "consumerMethod": "startActivity",
+          "id": "fh5c0ti7hofuiilve1tsg8v7el"
+        }
+      ]
+    },
+    "usesPermissions": {
+      "permission": [
+        "ACCESS_NETWORK_STATE",
+        "INTERNET",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_WIFI_STATE"
+      ]
+    },
+    "apkFile": "../../../app_repo/bundle/10 Daily Exercises.apk",
+    "name": "10 Daily Exercises"
+  }
+}
